@@ -30,6 +30,14 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
 void setup() {
   Serial.begin(9600);
   Serial.println("ILI9341 Test!"); 
+
+  pinMode(22, OUTPUT);
+  digitalWrite(22, LOW);
+  delay(5);
+  digitalWrite(22, HIGH);
+  delay(20);
+  digitalWrite(22, LOW);
+  delay(150);
  
   tft.begin();
 
